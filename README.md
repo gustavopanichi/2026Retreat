@@ -16,7 +16,7 @@ python3 -m http.server 8000
 | Path | What it is |
 | --- | --- |
 | `index.html` | The whole site: markup, styles and scripts in one file |
-| `assets/` | Photography, the retreat stamp, the ferris wheel and the favicon |
+| `assets/` | Photography, the Montreal drone loop and its poster, the ferris wheel and the favicon |
 
 ## Sections
 
@@ -34,6 +34,14 @@ live weather, what to bring, suggestions and good to know.
   588 m / 8 minute path from OpenStreetMap routing.
 
 Both need a network connection and degrade gracefully without one.
+
+## The Montreal band
+
+`assets/montreal-drone.mp4` is a 12 second aerial loop over Mount Royal, encoded
+to 1280x720 H.264 at roughly 10 MB. It autoplays muted and inline, and falls back
+to `montreal-poster.jpg` while it loads, if autoplay is blocked, or when the
+visitor prefers reduced motion. To swap the footage, re-encode to the same size
+and replace both files.
 
 ## Editing
 
