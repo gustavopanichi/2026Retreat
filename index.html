@@ -499,8 +499,8 @@ const DAYS=[
  {id:'tue',label:'Tue',date:'Sep 29',iso:'2026-09-29',note:'Arrivals throughout the day. Hotel group code: SKETCH0926.',blocks:[
   ['','','free','Arrivals throughout the day','Check into Hotel Monville (group code is <strong>SKETCH0926</strong>), get settled, come by CollectifMTL (second floor) to say hi, co-work if you like, and grab your retreat swag!'],
   ['19:30','','eat','Welcome dinner','7:30pm @ TBD, about a 15 minute walk from Hotel Monville. Everyone meet there; walk or Uber with some colleagues.',0,1]]},
- {id:'wed',label:'Wed',date:'Sep 30',iso:'2026-09-30',note:'Working day one. Arrive at CollectifMTL before 9:30am and get settled in before the first session.',blocks:[
-  ['09:00','09:30','free','Arrive at CollectifMTL','Get settled in before the first session.'],
+ {id:'wed',label:'Wed',date:'Sep 30',iso:'2026-09-30',note:'Working day one. CollectifMTL is open from 8am; be there before 9:30am for the first session.',blocks:[
+  ['08:00','09:30','free','Arrive at CollectifMTL','The workspace is open from 8am, so come whenever suits you. Settle in, grab a coffee, be ready for the first session at 9:30am.'],
   ['09:30','10:15','work','Welcome &amp; strategy touch-in','Retreat opening, plus company and strategy updates from Chris.'],
   ['10:15','12:30','free','Self-directed co-working',''],
   ['12:30','13:30','eat','Lunch in the workspace','Pizza, sandwiches and salads from AMEA.'],
@@ -509,8 +509,8 @@ const DAYS=[
   ['19:00','19:30','travel','Transport pickup','Pickup from the Hotel Monville lobby at 7pm.'],
   ['19:30','','eat','Dinner @ Anemone',''],
   ['21:30','23:30','move','Montreal by night bus tour','Pick up from the restaurant. Optional; otherwise grab an Uber back to the hotel.',1]]},
- {id:'thu',label:'Thu',date:'Oct 1',iso:'2026-10-01',note:'Working day two, then up the mountain. Be ready to leave Hotel Monville by 3:45pm.',blocks:[
-  ['09:00','09:30','free','Arrive at CollectifMTL','Get settled in before the first session.'],
+ {id:'thu',label:'Thu',date:'Oct 1',iso:'2026-10-01',note:'Working day two, then up the mountain. CollectifMTL is open from 8am. Be ready to leave Hotel Monville by 3:45pm.',blocks:[
+  ['08:00','09:30','free','Arrive at CollectifMTL','The workspace is open from 8am, so come whenever suits you. Settle in, grab a coffee, be ready for the first session at 9:30am.'],
   ['09:30','11:30','work','Workshop block, full group','Full team workshop. Topic still TBD.',0,1],
   ['11:30','12:30','free','Self-directed co-working',''],
   ['12:30','13:30','eat','Lunch in the workspace','Lebanese food from Yalla!'],
@@ -626,7 +626,7 @@ function f(){
  const y=scrollY;
  vel=vel*0.85+(y-lastY)*0.15;lastY=y;
  if(reduce)return;
- if(badge)badge.style.transform='rotate('+(y*0.02)+'deg) translateY('+(y*0.1)+'px)';
+ if(badge)badge.style.transform='translateY('+(y*0.1)+'px)';
  if(statement){const r=statement.getBoundingClientRect();const p=Math.max(0,Math.min(1,(-r.top)/(r.height-vh())));const n=Math.floor(p*(wordEls.length+2));wordEls.forEach((w,i)=>w.classList.toggle('on',i<n));}
  if(welcome){const r=welcome.parentElement.getBoundingClientRect();const c=(r.top+r.height/2-vh()/2)/vh();welcome.style.transform='translateY('+(c*-40)+'px)';}
  if(foot){const r=foot.getBoundingClientRect();const p=Math.max(0,Math.min(1,(vh()-r.top)/vh()));foot.style.transform='scale('+(0.82+p*0.18)+')';}
