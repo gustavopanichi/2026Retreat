@@ -20,6 +20,8 @@
   --r:8px; --rl:20px; --max:1140px; --pad:clamp(20px,4vw,150px);
 }
 *{box-sizing:border-box;margin:0;padding:0}
+br.mbr{display:none}
+@media (max-width:560px){br.mbr{display:inline}}
 body{overflow-x:hidden;font-family:var(--body);color:var(--moon);background:var(--off);line-height:1.5;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4,.d{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.95}
 a{color:inherit}
@@ -80,6 +82,7 @@ section{padding:clamp(72px,8vw,120px) 0}
 .statement .pin .wrap{width:100%;max-width:none;padding:0 var(--pad)}
 .statement h2{font-size:clamp(1.85rem,7vw,6.3rem);line-height:.98}
 .statement h2 .ln{display:block}
+@media (max-width:560px){.statement h2{font-size:clamp(2.35rem,11.4vw,3.5rem);line-height:.94}.statement h2 .ln{margin-bottom:.34em}.statement h2 .ln .w:first-child{display:block;margin-right:0}}
 .statement h2 span.w{display:inline-block;color:transparent;-webkit-text-stroke:1px var(--moon);transition:color .25s;margin-right:.22em}
 .statement h2 span.w.on{color:var(--moon);-webkit-text-stroke:0}
 .statement h2 .ln.white span.w{-webkit-text-stroke:1px var(--white)}
@@ -317,7 +320,7 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
     </div>
   </div>
   <div class="band">
-    <p class="dates"><b>Tuesday,</b> September 29 <span aria-hidden="true">→</span> <b>Friday,</b> October 2, 2026</p>
+    <p class="dates"><b>Tuesday,</b> September 29 <span aria-hidden="true">→</span><br class="mbr"> <b>Friday,</b> October 2, 2026</p>
     <div class="count" id="count" aria-live="polite">
       <div><p class="n" id="c-d">–</p><small>days</small></div><div><p class="n" id="c-h">–</p><small>hrs</small></div><div><p class="n" id="c-m">–</p><small>min</small></div><div><p class="n" id="c-s">–</p><small>sec</small></div>
     </div>
@@ -380,7 +383,7 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
         <div class="body">
           <p class="kicker">Work at</p>
           <h3>Collectif MTL</h3>
-          <p class="addr"><a href="https://maps.google.com/?q=397A+Rue+Sainte-Catherine+Ouest,+Montreal" target="_blank" rel="noopener">397A Sainte-Catherine St. West</a> x <a href="https://maps.google.com/?q=1407+Rue+Saint-Alexandre,+Montreal" target="_blank" rel="noopener">1407 Rue St-Alexandre</a></p>
+          <p class="addr"><a href="https://maps.google.com/?q=397A+Rue+Sainte-Catherine+Ouest,+Montreal" target="_blank" rel="noopener">397A Sainte-Catherine St. West</a> x<br class="mbr"> <a href="https://maps.google.com/?q=1407+Rue+Saint-Alexandre,+Montreal" target="_blank" rel="noopener">1407 Rue St-Alexandre</a></p>
           <div class="pills"><span class="pill sun">Open 8am to 7pm on <b>Tuesday</b>, <b>Wednesday</b> and <b>Thursday</b></span><span class="pill pink">8 minute walk from the hotel</span></div>
         </div>
       </article>
