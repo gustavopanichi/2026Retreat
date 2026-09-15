@@ -211,8 +211,8 @@ section{padding:clamp(72px,8vw,120px) 0}
 .bring li.big{grid-column:1/-1;background:var(--sun);font-family:var(--display);text-transform:uppercase;font-size:clamp(1.8rem,3.4vw,3.8rem);padding:22px 24px 22px 20px;gap:18px;grid-template-columns:74px minmax(0,1fr)}
 .bring li.big svg{fill:var(--moon);width:74px;height:74px}
 .bring li.big span{text-align:center}
-.bring .wheel{justify-self:center;align-self:end;width:min(100%,400px);height:auto;display:block}
-@media (max-width:1000px){.bring .grid{grid-template-columns:1fr}.bring .wheel{width:min(80%,360px)}}
+.bring .wheel{justify-self:center;align-self:end;width:min(100%,520px);height:auto;display:block}
+@media (max-width:1000px){.bring .grid{grid-template-columns:1fr}.bring .wheel{display:none}.bring ul{margin-bottom:clamp(56px,8vw,96px)}}
 @media (max-width:520px){.bring ul{grid-template-columns:1fr}.bring li{min-height:0}}
 
 /* ---- ferris wheel animation ---- */
@@ -423,7 +423,7 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
       <li><svg><use href="#g-leaf"/></svg><span>Weather-appropriate attire, a jacket, an umbrella</span></li>
       <li class="big"><svg><use href="#g-cross"/></svg><span>Excitement!</span></li>
     </ul>
-    <img class="wheel rise" src="assets/ferris.png" alt="" aria-hidden="true">
+    <img class="wheel rise" src="assets/skyline.png" alt="" aria-hidden="true">
   </div>
 </section>
 
