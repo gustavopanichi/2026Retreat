@@ -199,26 +199,26 @@ section{padding:clamp(72px,8vw,120px) 0}
 @media (max-width:520px){.wx{grid-template-columns:1fr}.wx .day{min-height:0}}
 
 /* ---- what to bring ---- */
-.bring{background:var(--white);padding-bottom:0;padding-top:clamp(52px,5.5vw,84px)}
+.bring{background:var(--white);padding-top:clamp(52px,5.5vw,84px);padding-bottom:clamp(52px,5.5vw,84px)}
 .bring .sec-head{margin-bottom:0}
 .bring .lede{margin-top:12px}
 .bring .grid{display:grid;grid-template-columns:570px minmax(0,1fr);gap:22px 46px;align-items:center}
 .bring .sec-head{grid-column:1;grid-row:1}
 .bring ul{grid-column:1;grid-row:2}
-.bring ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 16px;margin-bottom:clamp(56px,7vw,110px)}
+.bring ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 16px}
 .bring li{background:var(--off);border-radius:var(--rl);min-height:116px;padding:22px 24px;display:grid;grid-template-columns:52px minmax(0,1fr);gap:18px;align-items:center;font-size:1rem;line-height:1.35}
 .bring li svg{width:52px;height:52px;fill:var(--sun)}
 .bring li:nth-child(2) svg,.bring li:nth-child(4) svg{fill:var(--brown)}
 .bring li.big{grid-column:1/-1;background:var(--sun);font-family:var(--display);text-transform:uppercase;font-size:clamp(1.8rem,3.4vw,3.8rem);padding:22px 24px 22px 20px;gap:18px;grid-template-columns:74px minmax(0,1fr)}
 .bring li.big svg{fill:var(--moon);width:74px;height:74px}
 .bring li.big span{text-align:center}
-.bring .stamps{grid-column:2;grid-row:1/3;align-self:stretch;position:relative;min-height:560px}
-.bring .stamps img{position:absolute;width:47%;height:auto;display:block;filter:drop-shadow(0 12px 22px rgba(22,22,56,.13))}
-.bring .stamps img:nth-child(1){top:0;left:1%;transform:rotate(-6.5deg)}
-.bring .stamps img:nth-child(2){top:7%;right:0;transform:rotate(5deg)}
-.bring .stamps img:nth-child(3){bottom:0;left:0;transform:rotate(3.5deg)}
-.bring .stamps img:nth-child(4){bottom:8%;right:2%;transform:rotate(-4.5deg)}
-@media (max-width:1000px){.bring .grid{grid-template-columns:1fr}.bring .sec-head,.bring ul{grid-column:1;grid-row:auto}.bring .stamps{display:none}.bring ul{margin-bottom:clamp(56px,8vw,96px)}}
+.bring .stamps{grid-column:2;grid-row:1/3;align-self:stretch;justify-self:center;position:relative;width:100%;min-height:540px}
+.bring .stamps img{position:absolute;width:46%;height:auto;display:block;filter:drop-shadow(0 12px 22px rgba(22,22,56,.13))}
+.bring .stamps img:nth-child(1){top:3%;left:3%;transform:rotate(-6.5deg)}
+.bring .stamps img:nth-child(2){top:12%;right:3%;transform:rotate(5deg)}
+.bring .stamps img:nth-child(3){bottom:3%;left:3%;transform:rotate(3.5deg)}
+.bring .stamps img:nth-child(4){bottom:12%;right:3%;transform:rotate(-4.5deg)}
+@media (max-width:1000px){.bring .grid{grid-template-columns:1fr}.bring .sec-head,.bring ul{grid-column:1;grid-row:auto}.bring .stamps{display:none}}
 @media (max-width:520px){.bring ul{grid-template-columns:1fr}.bring li{min-height:0}}
 
 /* ---- ferris wheel animation ---- */
