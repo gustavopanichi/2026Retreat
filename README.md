@@ -16,7 +16,7 @@ python3 -m http.server 8000
 | Path | What it is |
 | --- | --- |
 | `index.html` | The whole site: markup, styles and scripts in one file |
-| `assets/` | Photography, the Montreal drone loop and its poster, the skyline illustration and the favicon |
+| `assets/` | Photography, the Montreal drone loop and its poster, the four MTL stamps and the favicon |
 
 ## Sections
 
