@@ -3,6 +3,12 @@
 Countdown and info minisite for the SketchDeck HQ retreat in Montreal,
 Tuesday 29 September – Friday 2 October 2026.
 
+## Source of truth
+
+`index.html` **is** the site. It is hand-edited and authoritative: no build step,
+no template, nothing to compile. Edit it directly, commit, and Vercel publishes to
+<https://2026-retreat-tan.vercel.app> within about a minute.
+
 ## Running it
 
 It is a static site. Open `index.html`, or serve the folder:
@@ -21,8 +27,12 @@ python3 -m http.server 8000
 ## Sections
 
 Hero with live countdown, the "more of us" scroll statement, Montreal photo band,
-agenda by day, downtown campus with a walking map, arrival information,
-live weather, what to bring, suggestions and good to know.
+agenda by day, downtown campus with a walking map, live weather, what to bring,
+suggestions and good to know.
+
+The arrival-information section is written but parked behind a `hidden` attribute
+on `<section class="arrive" id="arrivals">` until the travel details firm up.
+Remove the attribute to bring it back.
 
 ## Live data
 
@@ -45,6 +55,27 @@ and replace both files.
 
 ## Editing
 
-The agenda lives in the `DAYS` array near the top of the script block in
-`index.html`. Each entry is `[start, end, type, title, description, optional, tbc]`
-with times in Montreal local time.
+`index.html` is the only file to touch. It is one self-contained document —
+markup, styles and scripts together — so a change is: edit, commit, done.
+
+**Without cloning anything.** Open the repo on GitHub and press <kbd>.</kbd>; a full
+editor opens in the browser. Edit `index.html`, commit to `main`, and the live site
+updates in about a minute.
+
+**With git.**
+
+```bash
+git clone https://github.com/gustavopanichi/2026Retreat.git
+cd 2026Retreat
+python3 -m http.server 8000   # then open http://localhost:8000
+```
+
+Every push to `main` deploys straight to the live URL. There is no staging step and
+no review gate, so preview locally before you push.
+
+### The agenda
+
+The agenda is the `DAYS` array near the top of the script block. Each entry is
+`[start, end, type, title, description, optional, tbc]`, times in Montreal local
+time; the last two flags can be omitted. `optional` draws the dashed outline,
+`tbc` adds the TBC badge.
