@@ -27,12 +27,8 @@ python3 -m http.server 8000
 ## Sections
 
 Hero with live countdown, the "more of us" scroll statement, Montreal photo band,
-agenda by day, downtown campus with a walking map, live weather, what to bring,
-suggestions and good to know.
-
-The arrival-information section is written but parked behind a `hidden` attribute
-on `<section class="arrive" id="arrivals">` until the travel details firm up.
-Remove the attribute to bring it back.
+agenda by day, downtown campus with a walking map, arrival information,
+live weather, what to bring, suggestions and good to know.
 
 ## Live data
 
