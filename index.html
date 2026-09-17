@@ -126,7 +126,7 @@ section{padding:clamp(72px,8vw,120px) 0}
 .block.now{outline:3px solid var(--moon);outline-offset:2px}
 .block.now::after{content:"Now";position:absolute;right:14px;top:-12px;background:var(--moon);color:var(--white);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:var(--r)}
 .t-work{background:var(--sun)}.t-eat{background:var(--pink)}.t-move{background:var(--brown)}.t-free{background:var(--off)}.t-travel{background:var(--moon)}
-.block.opt{border-style:dashed}
+.block.opt{border-color:transparent;outline:2px dashed var(--moon);outline-offset:-2px}
 .sched-foot{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 
 /* ---- marquee ---- */
@@ -314,11 +314,11 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
     </svg>
     <div>
       <h1>More<br>of what<br><span class="sun">Matters</span></h1>
-      <p class="sub"><b>SketchDeck Retreat, Montreal 2026.</b><br>Four days in one city, one hotel and one workspace, with a maple forest at the end of it.</p>
+      <p class="sub"><b>SketchDeck Retreat, Montreal 2026.</b><br>Four days in one city, one hotel and one workspace, with a maple forest awaiting us at the end.</p>
     </div>
   </div>
   <div class="band">
-    <p class="dates"><b>Tuesday,</b> September 29 <span aria-hidden="true">→</span><br class="mbr"> <b>Friday,</b> October 2, 2026</p>
+    <p class="dates">Tuesday, <b>September 29</b> <span aria-hidden="true">→</span><br class="mbr"> Friday, <b>October 2, 2026</b></p>
     <div class="count" id="count" aria-live="polite">
       <div><p class="n" id="c-d">–</p><small>days</small></div><div><p class="n" id="c-h">–</p><small>hrs</small></div><div><p class="n" id="c-m">–</p><small>min</small></div><div><p class="n" id="c-s">–</p><small>sec</small></div>
     </div>
@@ -446,7 +446,7 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
     </div>
     <div class="cards rise">
       <article class="scard"><div class="ph"><img src="assets/time-out-market.jpg" alt="Time Out Market Montreal"></div><div class="body"><p class="kicker">Lunch · 5 min walk from CollectifMTL</p><h3>Time Out Market</h3><p>A perfect spot to cater to everyone's lunch time cravings. If you get in early on Tuesday, grab lunch here with another hungry colleague.</p><a class="link" href="https://www.timeoutmarket.com/montreal/" target="_blank" rel="noopener">timeoutmarket.com</a></div></article>
-      <article class="scard"><div class="ph"><img src="assets/crew-collective.jpg" alt="Crew Collective and Café"></div><div class="body"><p class="kicker">Coffee · 5 min walk from Hotel Monville</p><h3>Crew Collective &amp; Café</h3><p>Coffee and next-level pastries in a heritage building that was once the Royal Bank of Canada.</p><a class="link" href="https://crewcollectivecafe.com" target="_blank" rel="noopener">crewcollectivecafe.com</a></div></article>
+      <article class="scard"><div class="ph"><img src="assets/crew-collective.jpg" alt="Crew Collective and Café"></div><div class="body"><p class="kicker">Coffee · 5 min walk from Hotel Monville</p><h3>Crew Collective &amp; Café</h3><p>Coffee and next-level pastries in a heritage building that was once the Royal Bank of Canada.</p><p><b>Open to us on Thursday and Friday only.</b></p><a class="link" href="https://crewcollectivecafe.com" target="_blank" rel="noopener">crewcollectivecafe.com</a></div></article>
       <article class="scard"><div class="ph"><img src="assets/le-mal-necessaire.jpg" alt="Bar Le Mal Nécessaire"></div><div class="body"><p class="kicker">Nightcap · around the corner from the hotel</p><h3>Bar Le Mal Nécessaire</h3><p>Great for a nightcap with colleagues. Look for the green pineapple.</p><a class="link" href="https://www.lemalnecessaire.com" target="_blank" rel="noopener">lemalnecessaire.com</a></div></article>
     </div>
   </div>
@@ -455,13 +455,13 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
 <section class="info" id="info">
   <div class="wrap">
     <div class="head">
-      <div class="sec-head" style="margin-bottom:0"><h2 class="sec-title">Good to know</h2><p class="lede rise">The practical bits. Anything not here goes to Katie.</p></div>
+      <div class="sec-head" style="margin-bottom:0"><h2 class="sec-title">Good to know</h2><p class="lede rise">The practical bits. If you need further info, ask Katie.</p></div>
     </div>
     <div class="acc rise">
-      <details><summary><span class="lbl">6:30am</span><h3>Breakfast</h3><span class="tog"></span></summary><div class="body"><p>Breakfast via the hotel's self-service buffet opens daily at 6:30am in the lobby.</p></div></details>
+      <details><summary><span class="lbl">6:30am</span><h3>Breakfast</h3><span class="tog"></span></summary><div class="body"><p>Breakfast is served in the hotel lobby. The self-service buffet opens daily at 6:30am.</p></div></details>
       <details><summary><span class="lbl">8am–7pm</span><h3>CollectifMTL workspace</h3><span class="tog"></span></summary><div class="body"><p>The workspace is open for us from 8am to 7pm on Tuesday, Wednesday and Thursday. We have the entire second floor.</p><p>Go up the stairs in the primary entrance, or use the elevator entrance around the corner at 1407 Saint Alexander.</p></div></details>
       <details><summary><span class="lbl">SKETCH0926</span><h3>Hotel group code</h3><span class="tog"></span></summary><div class="body"><p>Use the group code SKETCH0926 when you check in to Hotel Monville on Tuesday.</p></div></details>
-      <details><summary><span class="lbl">Friday</span><h3>Getting to your flight</h3><span class="tog"></span></summary><div class="body"><p>Each SDer is in charge of getting themselves to their return flight. Grab an Uber to the airport, or if you're flying Air Canada you can use their Landline City Shuttle departing from the Palais des Congrès, a 5 minute walk from Hotel Monville, every 15 to 30 minutes.</p><p><a href="https://www.aircanada.com/ca/en/aco/home/plan/special-assistance/landline.html" target="_blank" rel="noopener">See the shuttle schedule</a> and book ahead of time.</p></div></details>
+      <details><summary><span class="lbl">Friday</span><h3>Getting to your return flight</h3><span class="tog"></span></summary><div class="body"><p>Each SDer is in charge of getting themselves to their return flight. Grab an Uber to the airport, or if you're flying Air Canada you can use their Landline City Shuttle departing from the Palais des Congrès, a 5 minute walk from Hotel Monville, every 15 to 30 minutes.</p><p><a href="https://www.aircanada.com/ca/en/aco/home/plan/special-assistance/landline.html" target="_blank" rel="noopener">See the shuttle schedule</a> and book ahead of time.</p></div></details>
     </div>
   </div>
 </section>
@@ -498,29 +498,30 @@ const TZ='-04:00';
 const DAYS=[
  {id:'tue',label:'Tue',date:'Sep 29',iso:'2026-09-29',note:'Arrivals throughout the day. Hotel group code: SKETCH0926.',blocks:[
   ['','','free','Arrivals throughout the day','Check into Hotel Monville (group code is <strong>SKETCH0926</strong>), get settled, come by CollectifMTL (second floor) to say hi, co-work if you like, and grab your retreat swag!'],
-  ['19:30','','eat','Welcome dinner','7:30pm @ TBD, about a 15 minute walk from Hotel Monville. Everyone meet there; walk or Uber with some colleagues.',0,1]]},
+  ['19:30','','eat','Welcome dinner at Le Serpent','7:30pm at <a href="https://www.leserpent.ca/en/#GROUPES" target="_blank" rel="noopener">Le Serpent</a>, about a 15 minute walk from Hotel Monville. Everyone meet there; walk or Uber with some colleagues.']]},
  {id:'wed',label:'Wed',date:'Sep 30',iso:'2026-09-30',note:'Working day one. CollectifMTL is open from 8am; be there before 9:30am for the first session.',blocks:[
+  ['06:30','','eat','Breakfast at the hotel','Served in the hotel lobby. The self-service buffet opens at 6:30am.'],
   ['08:00','09:30','free','Arrive at CollectifMTL','The workspace is open from 8am, so come whenever suits you. Settle in, grab a coffee, be ready for the first session at 9:30am.'],
   ['09:30','10:15','work','Welcome &amp; strategy touch-in','Retreat opening, plus company and strategy updates from Chris.'],
   ['10:15','12:30','free','Self-directed co-working',''],
   ['12:30','13:30','eat','Lunch in the workspace','Pizza, sandwiches and salads from AMEA.'],
   ['13:30','17:00','work','The Possibility Lab','A hands-on AI-powered creative sprint, led by Gustavo Panichi.'],
-  ['17:00','19:00','free','Flex time',''],
-  ['19:00','19:30','travel','Transport pickup','Pickup from the Hotel Monville lobby at 7pm.'],
-  ['19:30','','eat','Dinner @ Anemone',''],
+  ['17:00','19:30','free','Flex time','Two and a half hours before dinner. Some of you may want to head over to that neighbourhood early and explore before you sit down.'],
+  ['19:30','','eat','Dinner at Anemone','7:30pm at <a href="https://maps.app.goo.gl/M338N5JFZdxhVoK18" target="_blank" rel="noopener">Anemone</a>. No organised transport tonight, so nobody is being collected from the hotel. It is about 15 minutes by car from either the hotel or the workspace. Grab an Uber in a group as you are ready, or make a plan with people heading over from the same place at the same time.'],
   ['21:30','23:30','move','Montreal by night bus tour','Pick up from the restaurant. Optional; otherwise grab an Uber back to the hotel.',1]]},
- {id:'thu',label:'Thu',date:'Oct 1',iso:'2026-10-01',note:'Working day two, then up the mountain. CollectifMTL is open from 8am. Be ready to leave Hotel Monville by 3:45pm.',blocks:[
+ {id:'thu',label:'Thu',date:'Oct 1',iso:'2026-10-01',note:'Shorter working day, then up the mountain. CollectifMTL is open from 8am. <strong>Be ready to leave Hotel Monville by 3:45pm.</strong>',blocks:[
+  ['06:30','','eat','Breakfast at the hotel','Served in the hotel lobby. The self-service buffet opens at 6:30am.'],
   ['08:00','09:30','free','Arrive at CollectifMTL','The workspace is open from 8am, so come whenever suits you. Settle in, grab a coffee, be ready for the first session at 9:30am.'],
-  ['09:30','11:30','work','Workshop block, full group','Full team workshop. Topic still TBD.',0,1],
+  ['09:30','11:30','work','Workshop block','Project &amp; Account Success + Creative Impact + Client Services &mdash; account strategy huddle.<br>Other departments &mdash; TBC.',0,1],
   ['11:30','12:30','free','Self-directed co-working',''],
   ['12:30','13:30','eat','Lunch in the workspace','Lebanese food from Yalla!'],
   ['13:30','15:00','work','Manager-directed team workshops','Departmental team time.'],
-  ['15:00','15:45','free','Flex time','<strong>Be ready to leave Hotel Monville by 3:45pm.</strong>'],
+  ['15:00','15:45','free','Flex time · Be ready to leave Hotel Monville by 3:45pm',''],
   ['15:45','17:00','travel','Transportation to Mont Rigaud','About an hour and a quarter by bus.'],
-  ['17:00','23:00','eat','Sucrerie de la Montagne','A Québec Heritage site in the midst of a 120-acre forest of century-old maple trees atop Mont Rigaud. A celebratory closing evening with a traditional sugar shack experience: fresh mountain air, golden trees, a camp fire, live music and a hearty meal full of Quebecois fall flavors. Return to the hotel around 11pm.']]},
+  ['17:00','23:00','eat','Sucrerie de la Montagne','A Qu\u00e9bec Heritage site in the midst of a 120-acre forest of century-old maple trees atop Mont Rigaud. A celebratory closing evening with a traditional sugar shack experience. Fresh mountain air, golden trees, a camp fire, live music and a hearty meal full of Quebecois fall flavors. Return to the hotel around 11pm.']]},
  {id:'fri',label:'Fri',date:'Oct 2',iso:'2026-10-02',note:'Departures all day. Each SDer is in charge of getting themselves to their return flight.',blocks:[
-  ['06:30','','eat','Breakfast at the hotel','Self-service buffet in the lobby.'],
-  ['','','travel','Departures all day','Grab an Uber to the airport, or if flying Air Canada use their Landline City Shuttle departing from the Palais des Congrès (5 min walk from Hotel Monville) every 15 to 30 minutes. <a href="https://www.aircanada.com/ca/en/aco/home/plan/special-assistance/landline.html" target="_blank" rel="noopener">See the schedule</a> and book ahead of time.']]}
+  ['06:30','','eat','Breakfast at the hotel','Served in the hotel lobby. The self-service buffet opens at 6:30am.'],
+  ['','','travel','Departures all day','Grab an Uber to the airport, or if flying Air Canada use their Landline City Shuttle departing from the Palais des Congr\u00e8s (5 min walk from Hotel Monville) every 15 to 30 minutes. <a href="https://www.aircanada.com/ca/en/aco/home/plan/special-assistance/landline.html" target="_blank" rel="noopener">See the schedule</a> and book ahead of time.']]}
 ];
 const NAMES={work:'Work',eat:'Eat',move:'Move',free:'Free',travel:'Travel'};
 const tabs=document.getElementById('tabs'),blocksEl=document.getElementById('blocks'),noteEl=document.getElementById('day-note');
