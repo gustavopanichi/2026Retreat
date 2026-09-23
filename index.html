@@ -354,7 +354,7 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
       <p class="lede rise">All times are Montreal time. Tap a block for the detail; dashed blocks are optional.</p>
     </div>
     <div class="tabs" role="tablist" id="tabs"></div>
-    <div class="legend label"><span><i class="t-work"></i>Work</span><span><i class="t-eat"></i>Eat</span><span><i class="t-move"></i>Move</span><span><i class="t-travel"></i>Travel</span><span><i class="t-free"></i>Free time</span></div>
+    <div class="legend label"><span><i class="t-work"></i>Work</span><span><i class="t-eat"></i>Eat</span><span><i class="t-move"></i>Engage</span><span><i class="t-travel"></i>Travel</span><span><i class="t-free"></i>Flex time</span></div>
     <div id="day-note"></div>
     <div class="blocks" id="blocks" role="tabpanel"></div>
     <div class="sched-foot"><button class="btn" id="expand-all">Expand all</button></div>
@@ -448,6 +448,7 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
       <article class="scard"><div class="ph"><img src="assets/time-out-market.jpg" alt="Time Out Market Montreal"></div><div class="body"><p class="kicker">Lunch · 5 min walk from CollectifMTL</p><h3>Time Out Market</h3><p>A perfect spot to cater to everyone's lunch time cravings. If you get in early on Tuesday, grab lunch here with another hungry colleague.</p><a class="link" href="https://www.timeoutmarket.com/montreal/" target="_blank" rel="noopener">timeoutmarket.com</a></div></article>
       <article class="scard"><div class="ph"><img src="assets/crew-collective.jpg" alt="Crew Collective and Café"></div><div class="body"><p class="kicker">Coffee · 5 min walk from Hotel Monville</p><h3>Crew Collective &amp; Café</h3><p>Coffee and next-level pastries in a heritage building that was once the Royal Bank of Canada.</p><p><b>Open to us on Thursday and Friday only.</b></p><a class="link" href="https://crewcollectivecafe.com" target="_blank" rel="noopener">crewcollectivecafe.com</a></div></article>
       <article class="scard"><div class="ph"><img src="assets/le-mal-necessaire.jpg" alt="Bar Le Mal Nécessaire"></div><div class="body"><p class="kicker">Nightcap · around the corner from the hotel</p><h3>Bar Le Mal Nécessaire</h3><p>Great for a nightcap with colleagues. Look for the green pineapple.</p><a class="link" href="https://www.lemalnecessaire.com" target="_blank" rel="noopener">lemalnecessaire.com</a></div></article>
+      <article class="scard"><div class="ph"><img src="assets/musee-romeo.jpg" alt="Musée Romeo"></div><div class="body"><p class="kicker">Art · en route to Anemone</p><h3>Musée Romeo</h3><p>MTL's must-see street art museum, located in an industrial stairwell. Take the elevator up to 12th floor and walk down.</p><a class="link" href="https://wanderlog.com/place/details/134975/mus%C3%A9e-romeos" target="_blank" rel="noopener">wanderlog.com</a></div></article>
     </div>
   </div>
 </section>
@@ -455,7 +456,7 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
 <section class="info" id="info">
   <div class="wrap">
     <div class="head">
-      <div class="sec-head" style="margin-bottom:0"><h2 class="sec-title">Good to know</h2><p class="lede rise">The practical bits. If you need further info, ask Katie.</p></div>
+      <div class="sec-head" style="margin-bottom:0"><h2 class="sec-title">Good to know</h2><p class="lede rise">The practical bits. If you need further info, ask Katie. Cell # is in Slack #retreat channel.</p></div>
     </div>
     <div class="acc rise">
       <details><summary><span class="lbl">6:30am</span><h3>Breakfast</h3><span class="tog"></span></summary><div class="body"><p>Breakfast is served in the hotel lobby. The self-service buffet opens daily at 6:30am.</p></div></details>
@@ -518,12 +519,12 @@ const DAYS=[
   ['13:30','15:00','work','Manager-directed team workshops','Departmental team time.'],
   ['15:00','15:45','free','Flex time · Be ready to leave Hotel Monville by 3:45pm',''],
   ['15:45','17:00','travel','Transportation to Mont Rigaud','About an hour and a quarter by bus.'],
-  ['17:00','23:00','eat','Sucrerie de la Montagne','A Qu\u00e9bec Heritage site in the midst of a 120-acre forest of century-old maple trees atop Mont Rigaud. A celebratory closing evening with a traditional sugar shack experience. Fresh mountain air, golden trees, a camp fire, live music and a hearty meal full of Quebecois fall flavors. Return to the hotel around 11pm.']]},
+  ['17:00','23:00','move','Sucrerie de la Montagne','A Qu\u00e9bec Heritage site in the midst of a 120-acre forest of century-old maple trees atop Mont Rigaud. A celebratory closing evening with a traditional sugar shack experience. Fresh mountain air, golden trees, a camp fire, live music and a hearty meal full of Quebecois fall flavors. Return to the hotel around 11pm.']]},
  {id:'fri',label:'Fri',date:'Oct 2',iso:'2026-10-02',note:'Departures all day. Each SDer is in charge of getting themselves to their return flight.',blocks:[
   ['06:30','','eat','Breakfast at the hotel','Served in the hotel lobby. The self-service buffet opens at 6:30am.'],
   ['','','travel','Departures all day','Grab an Uber to the airport, or if flying Air Canada use their Landline City Shuttle departing from the Palais des Congr\u00e8s (5 min walk from Hotel Monville) every 15 to 30 minutes. <a href="https://www.aircanada.com/ca/en/aco/home/plan/special-assistance/landline.html" target="_blank" rel="noopener">See the schedule</a> and book ahead of time.']]}
 ];
-const NAMES={work:'Work',eat:'Eat',move:'Move',free:'Free',travel:'Travel'};
+const NAMES={work:'Work',eat:'Eat',move:'Engage',free:'Flex',travel:'Travel'};
 const tabs=document.getElementById('tabs'),blocksEl=document.getElementById('blocks'),noteEl=document.getElementById('day-note');
 function fmt(t){if(!t)return '';let [h,m]=t.split(':').map(Number);const ap=h>=12?'pm':'am';h=h%12||12;return h+(m?':'+String(m).padStart(2,'0'):'')+ap;}
 function render(id){
