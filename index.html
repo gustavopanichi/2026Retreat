@@ -229,6 +229,7 @@ section{padding:clamp(72px,8vw,120px) 0}
 .scard{background:var(--white);border-radius:var(--rl);overflow:hidden;display:flex;flex-direction:column;min-height:589px}
 .scard .ph{aspect-ratio:364/272;overflow:hidden;background:var(--moon)}
 .scard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.scard .ph iframe{width:100%;height:calc(100% + 48px);margin-top:-48px;border:0;display:block}
 .scard:hover .ph img{transform:scale(1.04)}
 .scard .body{padding:26px 26px 28px;display:flex;flex-direction:column;gap:12px;flex:1}
 .scard .kicker{font-size:.94rem;letter-spacing:.04em;text-transform:uppercase;line-height:1.5}
@@ -442,13 +443,15 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
   <div class="wrap">
     <div class="sec-head">
       <h2 class="sec-title">Suggestions</h2>
-      <p class="lede rise">Three places within a few minutes of the campus.</p>
+      <p class="lede rise">Some exciting places around the Downtown "campus" and beyond that you may want to pencil into your plans.</p>
     </div>
     <div class="cards rise">
       <article class="scard"><div class="ph"><img src="assets/time-out-market.jpg" alt="Time Out Market Montreal"></div><div class="body"><p class="kicker">Lunch · 5 min walk from CollectifMTL</p><h3>Time Out Market</h3><p>A perfect spot to cater to everyone's lunch time cravings. If you get in early on Tuesday, grab lunch here with another hungry colleague.</p><a class="link" href="https://www.timeoutmarket.com/montreal/" target="_blank" rel="noopener">timeoutmarket.com</a></div></article>
       <article class="scard"><div class="ph"><img src="assets/crew-collective.jpg" alt="Crew Collective and Café"></div><div class="body"><p class="kicker">Coffee · 5 min walk from Hotel Monville</p><h3>Crew Collective &amp; Café</h3><p>Coffee and next-level pastries in a heritage building that was once the Royal Bank of Canada.</p><p><b>Open to us on Thursday and Friday only.</b></p><a class="link" href="https://crewcollectivecafe.com" target="_blank" rel="noopener">crewcollectivecafe.com</a></div></article>
       <article class="scard"><div class="ph"><img src="assets/le-mal-necessaire.jpg" alt="Bar Le Mal Nécessaire"></div><div class="body"><p class="kicker">Nightcap · around the corner from the hotel</p><h3>Bar Le Mal Nécessaire</h3><p>Great for a nightcap with colleagues. Look for the green pineapple.</p><a class="link" href="https://www.lemalnecessaire.com" target="_blank" rel="noopener">lemalnecessaire.com</a></div></article>
       <article class="scard"><div class="ph"><img src="assets/musee-romeo.jpg" alt="Musée Romeo"></div><div class="body"><p class="kicker">Art · en route to Anemone</p><h3>Musée Romeo</h3><p>MTL's must-see street art museum, located in an industrial stairwell. Take the elevator up to 12th floor and walk down.</p><a class="link" href="https://wanderlog.com/place/details/134975/mus%C3%A9e-romeos" target="_blank" rel="noopener">wanderlog.com</a></div></article>
+      <article class="scard"><div class="ph"><img src="assets/jean-talon-market.jpg" alt="Jean-Talon Market"></div><div class="body"><p class="kicker">SITE SEE . LITTLE ITALY NEIGHBORHOOD</p><h3>Jean-Talon Market</h3><p>Explore the vibrant, historic Little Italy neighborhood and one of North America’s largest open-air public markets, Jean-Talon Market.</p><a class="link" href="https://www.mtl.org/en/experience/welcome-little-italy" target="_blank" rel="noopener">mtl.org</a></div></article>
+      <article class="scard"><div class="ph"><iframe src="https://www.google.com/maps/d/embed?mid=1T9zvzdMYIs7hgtfQX-cwXeIaLguIsoU&amp;ehbc=2E312F&amp;noprof=1" title="Map of seven Montreal speakeasies" loading="lazy"></iframe></div><div class="body"><h3>Explore the secret speakeasys of MTL</h3><p>Cloakroom<br>Gokudo<br>Cold room<br>Le Speakeasy<br>Clandestino<br>Le 4e Mur<br>Atwater Cocktail Club</p><a class="link" href="https://www.google.com/maps/d/viewer?mid=1T9zvzdMYIs7hgtfQX-cwXeIaLguIsoU" target="_blank" rel="noopener">google.com/maps</a></div></article>
     </div>
   </div>
 </section>
@@ -456,7 +459,7 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
 <section class="info" id="info">
   <div class="wrap">
     <div class="head">
-      <div class="sec-head" style="margin-bottom:0"><h2 class="sec-title">Good to know</h2><p class="lede rise">The practical bits. If you need further info, ask Katie. Cell # is in Slack #retreat channel.</p></div>
+      <div class="sec-head" style="margin-bottom:0"><h2 class="sec-title">Good to know</h2><p class="lede rise">The practical bits. If you need further info, ask Katie @ +1-773-559-5723 or holler in the #retreat channel on Slack</p></div>
     </div>
     <div class="acc rise">
       <details><summary><span class="lbl">6:30am</span><h3>Breakfast</h3><span class="tog"></span></summary><div class="body"><p>Breakfast is served in the hotel lobby. The self-service buffet opens daily at 6:30am.</p></div></details>
@@ -507,9 +510,9 @@ const DAYS=[
   ['10:15','12:30','free','Self-directed co-working',''],
   ['12:30','13:30','eat','Lunch in the workspace','Pizza, sandwiches and salads from AMEA.'],
   ['13:30','17:00','work','The Possibility Lab','A hands-on AI-powered creative sprint, led by Gustavo Panichi.'],
-  ['17:00','19:30','free','Flex time','Two and a half hours before dinner. Some of you may want to head over to that neighbourhood early and explore before you sit down.'],
+  ['17:00','19:00','free','Flex time','* If time allows, you may want to check out the hip neighborhoods of Little Italy and Mile-Ex on your way to Anemone restaurant for dinner.'],
   ['19:30','','eat','Dinner at Anemone','7:30pm at <a href="https://maps.app.goo.gl/M338N5JFZdxhVoK18" target="_blank" rel="noopener">Anemone</a>. No organised transport tonight, so nobody is being collected from the hotel. It is about 15 minutes by car from either the hotel or the workspace. Grab an Uber in a group as you are ready, or make a plan with people heading over from the same place at the same time.'],
-  ['21:30','23:30','move','Montreal by night bus tour','Pick up from the restaurant. Optional; otherwise grab an Uber back to the hotel.',1]]},
+  ['21:30','23:30','move','Montreal by night bus tour','We\'ll be picked up from the restaurant to see the city sights from motorcoach.<br><em>Optional; otherwise grab an Uber back to the hotel.</em>',1]]},
  {id:'thu',label:'Thu',date:'Oct 1',iso:'2026-10-01',note:'Shorter working day, then up the mountain. CollectifMTL is open from 8am. <strong>Be ready to leave Hotel Monville by 3:45pm.</strong>',blocks:[
   ['06:30','','eat','Breakfast at the hotel','Served in the hotel lobby. The self-service buffet opens at 6:30am.'],
   ['08:00','09:30','free','Arrive at CollectifMTL','The workspace is open from 8am, so come whenever suits you. Settle in, grab a coffee, be ready for the first session at 9:30am.'],
