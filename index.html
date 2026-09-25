@@ -179,7 +179,7 @@ section{padding:clamp(72px,8vw,120px) 0}
 .arr-acc{margin-top:36px;border:1px solid var(--moon);border-radius:var(--r);background:var(--off)}
 .arr-acc>summary{display:grid;grid-template-columns:minmax(0,1fr) 40px;gap:0 22px;align-items:center;padding:26px 24px 22px}
 .arr-acc>summary h3{font-size:1.5rem;line-height:1.1}
-.arr-acc .tog{width:36px;height:36px;border-radius:50%;background:var(--moon);color:var(--white);display:grid;place-items:center;font-size:1.3rem;line-height:1;justify-self:end;transition:transform .3s}
+.arr-acc .tog{width:36px;height:36px;border-radius:50%;background:var(--moon);color:var(--white);display:grid;place-items:center;font-size:1.3rem;line-height:1;justify-self:end;transition:transform .3s;padding-bottom:3px}
 .arr-acc[open]>summary .tog{transform:rotate(180deg)}
 .arr-acc[open]>summary .tog::before{content:"–"}.arr-acc:not([open])>summary .tog::before{content:"+"}
 .arr-body{padding:0 24px 8px}
@@ -279,7 +279,7 @@ section{padding:clamp(72px,8vw,120px) 0}
 .acc summary::-webkit-details-marker{display:none}
 .acc summary .lbl{font-family:var(--display);text-transform:uppercase;font-size:1.05rem;line-height:1.2}
 .acc summary h3{font-size:1.5rem;line-height:1.1}
-.acc summary .tog{width:36px;height:36px;border-radius:50%;background:var(--moon);color:var(--white);display:grid;place-items:center;font-size:1.3rem;line-height:1;justify-self:end;transition:transform .3s}
+.acc summary .tog{width:36px;height:36px;border-radius:50%;background:var(--moon);color:var(--white);display:grid;place-items:center;font-size:1.3rem;line-height:1;justify-self:end;transition:transform .3s;padding-bottom:3px}
 .acc details[open] .tog{transform:rotate(180deg)}
 .acc details[open] .tog::before{content:"–"}.acc details:not([open]) .tog::before{content:"+"}
 .acc .body{padding:0 24px 26px 172px}
