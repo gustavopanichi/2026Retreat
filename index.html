@@ -171,8 +171,30 @@ section{padding:clamp(72px,8vw,120px) 0}
 .arrive{background:var(--white)}
 .arrive .head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
 .arrive .mark{width:clamp(64px,8vw,114px);flex:none;margin-top:6px}
-.arrive .box{margin-top:36px;border:1px solid var(--moon);border-radius:var(--r);min-height:clamp(180px,20vw,270px);display:grid;place-items:center;background:var(--white)}
-.arrive .box h3{font-size:clamp(1.8rem,3.6vw,3.2rem)}
+.arrive .arr-meta{margin-top:10px;font-size:.94rem;letter-spacing:.04em;text-transform:uppercase;font-weight:500}
+.xfers{margin-top:36px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;align-items:start}
+.xfer{border:1px solid var(--moon);border-radius:var(--r);background:var(--white);overflow:hidden}
+.xfer header{background:var(--sky);border-bottom:1px solid var(--moon);padding:18px 20px;display:flex;justify-content:space-between;align-items:baseline;gap:6px 16px;flex-wrap:wrap}
+.xfer h3{font-size:clamp(1.6rem,2.4vw,2.2rem);line-height:1}
+.xfer header p{font-size:.94rem;letter-spacing:.04em;text-transform:uppercase;font-weight:500}
+.xfer ol{list-style:none}
+.xfer li{display:grid;grid-template-columns:84px minmax(0,1fr);gap:14px;padding:14px 20px}
+.xfer li+li{border-top:1px solid var(--grey)}
+.xfer time{font-family:var(--display);text-transform:uppercase;font-size:1rem;line-height:1.35}
+.xfer b{display:block;font-size:1rem;line-height:1.35}
+.xfer span{display:block;font-size:.9375rem}
+.xfer abbr{text-decoration:none}
+@media (max-width:820px){.xfers{grid-template-columns:1fr}}
+.arr-guide{margin-top:36px;background:var(--off);border-radius:var(--rl);padding:clamp(24px,3.4vw,44px)}
+.arr-guide h3{font-size:clamp(1.6rem,2.4vw,2.2rem);line-height:1}
+.arr-guide .arr-intro{margin-top:14px;max-width:64ch}
+.arr-cols{margin-top:clamp(24px,3vw,36px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,40px)}
+.arr-cols h4{font-size:1.15rem;line-height:1.1;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--moon)}
+.arr-cols p{font-size:.9375rem}
+.arr-cols p+p{margin-top:10px}
+.arr-guide a{text-decoration:underline}
+.xfers{scroll-margin-top:24px}
+@media (max-width:900px){.arr-cols{grid-template-columns:1fr}}
 
 /* ---- weather ---- */
 .weather{background:var(--sun)}
@@ -401,10 +423,24 @@ footer .row{padding:clamp(26px,3vw,40px) 20px clamp(28px,3vw,42px);font-size:.66
 <section class="arrive" id="arrivals">
   <div class="wrap">
     <div class="head">
-      <div class="sec-head" style="margin-bottom:0"><h2 class="sec-title">Arrival information</h2><p class="lede rise">Flights, airport transfers and who lands when.</p></div>
+      <div class="sec-head" style="margin-bottom:0"><h2 class="sec-title">Arrival information</h2><p class="lede rise">Flights, airport transfers and who lands when.</p><p class="arr-meta rise">Tuesday, September 29 · Montréal–Trudeau Airport (YUL)</p></div>
       <div class="mark rise"><svg class="art art-diamond" viewBox="1150 5364 124 124" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><path d="M1211.99 5383.95L1169.94 5426.01L1211.99 5468.06L1254.05 5426.01L1211.99 5383.95Z" fill="#7E5735"/><path d="M1197.06 5368.99L1155 5411.05L1169.95 5425.99L1212 5383.94L1197.06 5368.99Z" fill="#FFB2D5"/><path d="M1254.05 5426.01L1212 5468.06L1226.94 5483.01L1269 5440.95L1254.05 5426.01Z" fill="#FFB2D5"/><path d="M1269 5411.05L1226.94 5368.99L1212 5383.94L1254.05 5425.99L1269 5411.05Z" fill="#F95104"/><path d="M1212 5468.06L1169.95 5426.01L1155 5440.95L1197.06 5483.01L1212 5468.06Z" fill="#F95104"/><path d="M1205.1 5441.96C1196.64 5441.96 1189.83 5435.04 1189.83 5426.64H1194.36C1194.36 5432.58 1199.19 5437.33 1205.1 5437.33C1211.01 5437.33 1215.84 5432.58 1215.84 5426.64H1220.37C1220.37 5435.04 1213.58 5441.96 1205.1 5441.96Z" fill="#F4F4F0"/><path d="M1218.9 5410.04C1227.36 5410.04 1234.17 5417.15 1234.17 5425.79H1229.64C1229.64 5419.68 1224.81 5414.71 1218.9 5414.71C1212.99 5414.71 1208.16 5419.7 1208.16 5425.79H1203.63C1203.63 5417.15 1210.42 5410.04 1218.9 5410.04Z" fill="#F4F4F0"/></svg></div>
     </div>
-    <div class="box rise"><h3>Coming soon</h3></div>
+    <div class="arr-guide rise">
+      <h3>Montréal–Trudeau (YUL) Arrival Instructions</h3>
+      <p class="arr-intro">YUL is a relatively compact airport with one main exit into the public arrivals area for both domestic and international travelers.</p>
+      <div class="arr-cols">
+        <div><h4>If you have a pre-arranged SD ride</h4><p>Check the <a href="#transfers">transportation schedule</a> to see if you’ve been assigned to a group transfer.</p><p>After collecting your luggage and exiting into the public arrivals area, look to the right of the exit doors for a JPDL team member wearing a black JPDL shirt and holding an SD logo sign. They’ll greet you and escort you to your chartered vehicle.</p></div>
+        <div><h4>If you do NOT have a pre-arranged ride</h4><p>If you’re not listed on the transportation schedule, grab an Uber or Lyft at your own pace and head to the hotel.</p><p><b>Uber &amp; Lyft pickup:</b> Follow airport signage to Door 28 on the arrivals level for access to the designated rideshare pickup area. A courtesy shuttle serves this zone from 4:00 a.m.–10:00 p.m.</p><p><b>Flying Air Canada?</b> You can also book the Landline shuttle to downtown Montréal in advance <a href="https://www.aircanada.com/ca/en/aco/home/plan/special-assistance/landline.html" target="_blank" rel="noopener">here</a>.</p></div>
+        <div><h4>What to expect when you land</h4><p><b>Domestic arrivals:</b> Head to baggage claim, collect your luggage, and exit into the public arrivals area.</p><p><b>International arrivals:</b> Clear customs → head downstairs to baggage claim → collect your luggage → continue through the final checkpoint → exit into the public arrivals area.</p><p>JPDL will be waiting immediately outside this final exit for anyone with a pre-arranged SD ride.</p></div>
+      </div>
+    </div>
+    <div class="xfers rise" id="transfers">
+      <article class="xfer"><header><h3>Transfer A1</h3><p>Sprinter Van</p></header><ol><li><time datetime="2026-09-29T11:23">11:23am</time><div><b>Aislinn Barry</b><span>IAD · <abbr title="Air Canada">AC</abbr> 8724</span></div></li><li><time datetime="2026-09-29T11:27">11:27am</time><div><b>Jade Stanfield</b><span>RDU · <abbr title="United">UA</abbr> 8051</span></div></li><li><time datetime="2026-09-29T11:36">11:36am</time><div><b>Kiki McCalla</b><span>ATL · <abbr title="Delta">DL</abbr> 2597</span></div></li><li><time datetime="2026-09-29T11:45">11:45am</time><div><b>Luis Martinez</b><span>MIA · <abbr title="Air Canada">AC</abbr> 1205</span></div></li></ol></article>
+      <article class="xfer"><header><h3>Transfer A2</h3><p>SUV</p></header><ol><li><time datetime="2026-09-29T12:12">12:12pm</time><div><b>Krissy Swim</b><span>YHZ · <abbr title="Air Canada">AC</abbr> 663</span></div></li><li><time datetime="2026-09-29T12:26">12:26pm</time><div><b>Chloe Rees</b><span>PHL · <abbr title="American Airlines">AA</abbr> 5112</span></div></li><li><time datetime="2026-09-29T12:26">12:26pm</time><div><b>Kathryn Jackson</b><span>PHL · <abbr title="American Airlines">AA</abbr> 5112</span></div></li></ol></article>
+      <article class="xfer"><header><h3>Transfer A3</h3><p>SUV</p></header><ol><li><time datetime="2026-09-29T13:31">1:31pm</time><div><b>Milly Bianda</b><span>LGA · <abbr title="Delta">DL</abbr> 5387</span></div></li><li><time datetime="2026-09-29T13:31">1:31pm</time><div><b>Rob Hines</b><span>LGA · <abbr title="Delta">DL</abbr> 5387</span></div></li><li><time datetime="2026-09-29T13:31">1:31pm</time><div><b>Emily Smith</b><span>LGA · <abbr title="Delta">DL</abbr> 5387</span></div></li></ol></article>
+      <article class="xfer"><header><h3>Transfer A4</h3><p>Sprinter Van</p></header><ol><li><time datetime="2026-09-29T16:22">4:22pm</time><div><b>Laura Marzec</b><span>CLE · <abbr title="Air Canada">AC</abbr> 8648</span></div></li><li><time datetime="2026-09-29T16:25">4:25pm</time><div><b>Katrina Baker</b><span>ORD · <abbr title="American Airlines">AA</abbr> 3602</span></div></li><li><time datetime="2026-09-29T16:42">4:42pm</time><div><b>Vanessa Jeschke</b><span>SFO · <abbr title="United">UA</abbr> 8032</span></div></li><li><time datetime="2026-09-29T16:42">4:42pm</time><div><b>Dan Hopkins</b><span>SFO · <abbr title="Air Canada">AC</abbr> 756</span></div></li><li><time datetime="2026-09-29T16:42">4:42pm</time><div><b>Maria Levin</b><span>SFO · <abbr title="Air Canada">AC</abbr> 756</span></div></li><li><time datetime="2026-09-29T16:42">4:42pm</time><div><b>Gina Kromrey</b><span>MSP · <abbr title="Air Canada">AC</abbr> 8850</span></div></li></ol></article>
+    </div>
   </div>
 </section>
 
